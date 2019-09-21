@@ -1,0 +1,14 @@
+{
+  "name": "crud",
+  "version": "1.0.0",
+  "description": "Serverless REST API with MongoDB using Mongoose and Bluebird for promisifying",
+  "main": "handler.js",
+  "dependencies": {
+    "bluebird": "^3.5.5",
+    "dotenv": "^8.1.0",
+    "mongoose": "^5.7.1",
+    "validator": "^11.1.0"
+  },
+  "author": "",
+  "license": "MIT"
+}

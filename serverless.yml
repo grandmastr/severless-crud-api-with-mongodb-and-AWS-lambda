@@ -1,0 +1,41 @@
+service: aws-node-mongodb
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+
+functions:
+#  Create
+  createProduct:
+    handler: handler.createProduct
+    events:
+      - http:
+          path: product
+          method: post
+          cors: true
+# Read
+  product:
+    handler: handler.product
+    events:
+      - http:
+          path: user/{id}
+          method: get
+          cors: true
+
+# Update
+  updateProduct:
+    handler: handler.updateProduct
+    events:
+      - http:
+          path: product/{id}
+          method: put
+          cors: true
+
+# Delete
+  deleteProduct:
+    handler: handler.deleteProduct
+    events:
+      - http:
+          path: product/{id}
+          method: delete
+          cors: true

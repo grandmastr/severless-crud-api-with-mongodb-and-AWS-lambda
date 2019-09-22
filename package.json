@@ -9,6 +9,5 @@
     "mongoose": "^5.7.1",
     "validator": "^11.1.0"
   },
-  "author": "",
-  "license": "MIT"
+  "author": ""
 }

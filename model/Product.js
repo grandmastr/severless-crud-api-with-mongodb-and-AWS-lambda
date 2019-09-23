@@ -9,14 +9,19 @@ const model = mongoose.model('Product', {
     type: Number,
     required: true,
   },
-  availableQuantity: {
+  description: {
+    type: String,
+    required: true,
+  },
+  sku: {
     type: Number,
     required: false,
     default: 1
   },
-  description: {
-    type: String,
+  status: {
+    type: Number,
     required: true,
+    default: 1
   },
   date: {
     type: Date,

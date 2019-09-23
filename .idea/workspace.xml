@@ -11,8 +11,7 @@
       <change afterPath="$PROJECT_DIR$/.idea/serverless-crud.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/events/udpateProduct.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/Product.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/handler.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/serverless.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
@@ -37,9 +36,8 @@
       <change afterPath="$PROJECT_DIR$/../../hooking-up/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../thegrandmaster/.idea/thegrandmaster.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/createProduct.json" beforeDir="false" afterPath="$PROJECT_DIR$/events/createProduct.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/handler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/Product.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../kashbase-user-dashboard/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../kashbase-user-dashboard/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../kashbase-user-dashboard/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../kashbase-user-dashboard/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../kashbase-user-dashboard/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/../../kashbase-user-dashboard/public/favicon.ico" afterDir="false" />
@@ -49,7 +47,9 @@
       <change beforePath="$PROJECT_DIR$/../../kashbase-user-dashboard/src/components/HelloWorld.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../kashbase-user-dashboard/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../kashbase-user-dashboard/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../kashbase-user-dashboard/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../kashbase-user-dashboard/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kashbase-user-dashboard/src/store/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../kashbase-user-dashboard/src/store/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kashbase-user-dashboard/src/store/actions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kashbase-user-dashboard/src/store/mutation-types.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kashbase-user-dashboard/src/store/mutations.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../kashbase-user-dashboard/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../kashbase-user-dashboard/src/store/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../kashbase-user-dashboard/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../kashbase-user-dashboard/vue.config.js" afterDir="false" />
     </list>
@@ -64,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/handler.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="67" column="4" lean-forward="true" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
+            <state relative-caret-position="1742">
+              <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -79,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/Product.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+            <state relative-caret-position="304">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -115,7 +115,7 @@
         <entry file="file://$PROJECT_DIR$/events/createProduct.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="182">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -133,17 +133,17 @@
         <entry file="file://$PROJECT_DIR$/events/deleteProduct.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="104">
-              <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="438">
-                <caret line="17" column="62" lean-forward="true" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
+              <first_editor relative-caret-position="182">
+                <caret line="7" selection-start-line="7" selection-end-line="7" />
               </first_editor>
               <second_editor />
             </state>
@@ -167,18 +167,18 @@
       <list>
         <option value="$PROJECT_DIR$/model/User.js" />
         <option value="$PROJECT_DIR$/serverless.yml" />
-        <option value="$PROJECT_DIR$/model/Product.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/template.yml" />
         <option value="$PROJECT_DIR$/events/package.json" />
         <option value="$PROJECT_DIR$/events/create.json" />
         <option value="$PROJECT_DIR$/events/deleteProduct.json" />
-        <option value="$PROJECT_DIR$/events/createProduct.json" />
         <option value="$PROJECT_DIR$/events/readProduct.json" />
         <option value="$PROJECT_DIR$/events/udpateProduct.json" />
         <option value="$PROJECT_DIR$/handler.js" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/events/createProduct.json" />
+        <option value="$PROJECT_DIR$/model/Product.js" />
       </list>
     </option>
   </component>
@@ -194,7 +194,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -216,6 +215,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -256,18 +256,19 @@
       <workItem from="1569159782858" duration="7181000" />
       <workItem from="1569188577722" duration="157000" />
       <workItem from="1569217361690" duration="1512000" />
-      <workItem from="1569219659610" duration="3242000" />
+      <workItem from="1569219659610" duration="3643000" />
+      <workItem from="1569230302703" duration="145000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19763000" />
+    <option name="totallyTimeSpent" value="20309000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1024" height="768" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22977023" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22977023" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -282,7 +283,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="GraphQL" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.10372771" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.19286872" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -303,10 +304,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/events/package.json" />
-    <entry file="file://$PROJECT_DIR$/model/Product.js">
+    <entry file="file://$PROJECT_DIR$/handler.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+        <state relative-caret-position="1742">
+          <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/udpateProduct.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -327,13 +335,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/events/createProduct.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/events/readProduct.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
@@ -344,31 +345,31 @@
     <entry file="file://$PROJECT_DIR$/events/deleteProduct.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/events/udpateProduct.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/handler.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="67" column="4" lean-forward="true" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="438">
-            <caret line="17" column="62" lean-forward="true" selection-start-line="17" selection-start-column="62" selection-end-line="17" selection-end-column="62" />
+          <first_editor relative-caret-position="182">
+            <caret line="7" selection-start-line="7" selection-end-line="7" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/createProduct.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>

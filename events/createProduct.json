@@ -2,6 +2,8 @@
   "body": {
     "name": "Baretta M17",
     "price": "1200",
-    "description": "Swift action pump gun"
+    "description": "Swift action pump gun",
+    "sku": "12",
+    "status": "1"
   }
 }

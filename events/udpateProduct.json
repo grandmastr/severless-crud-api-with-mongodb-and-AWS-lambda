@@ -1,0 +1,10 @@
+{
+  "body": {
+    "name": "Glock 17",
+    "price": "4000",
+    "description": "Browning handheld gun"
+  },
+  "pathParameters": {
+    "id": "5d886cef4094211c7250c405"
+  }
+}

@@ -54,21 +54,24 @@ module.exports.product = (event, context, callback) => {
 
 // Update
 module.exports.updateProduct = (event, context, callback) => {
-  // const data = JSON.stringify(event.body);
-  console.log(event, context, callback);
-  // const id = event.pathParameters.id;
+  const { name, description } = event.body;
+  const id = event.pathParameters.id;
 
   const product = new ProductModel({
-    name: 'SkateBoards',
-    description: "James Olsen",
-    price: 1100
+    name,
+    description
   });
 
-  // dbConnectAndExecute(mongoString, () => (
-  //   ProductModel.findByIdAndUpdate(id, product)
-  //     .then(() => callback(null, { statusCode: 200, body: JSON.stringify('Ok') }))
-  //     .catch(err => callback(err, createErrorResponse(err.statusCode, err.message)))
-  // ));
+  dbConnectAndExecute(mongoString, () => (
+    ProductModel.findByIdAndUpdate({ _id: id }, { $set: product }, {new: true})
+      .then(updatedDoc => callback(null, {
+        statusCode: 200,
+        body:  JSON.stringify(`${updatedDoc.name} updated successfully`)
+      }))
+      .catch(err => (
+        callback(null, createErrorResponse(err.statusCode, err.message))
+      ))
+  ));
 };
 
 // Delete
@@ -76,7 +79,7 @@ module.exports.deleteProduct = (event, context, callback) => {
   dbConnectAndExecute(mongoString, () => (
     ProductModel
       .remove({_id: event.pathParameters.id})
-      .then(() => callback(null, {statusCode: 200, body: JSON.stringify('Ok')}))
+      .then(() => callback(null, {statusCode: 200, body: JSON.stringify('Entry Deleted, Ok')}))
       .catch(err => callback(null, createErrorResponse(err.statusCode, err.message)))
   ));
 };

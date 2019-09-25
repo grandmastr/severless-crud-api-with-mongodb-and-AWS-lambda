@@ -18,7 +18,7 @@ functions:
     handler: handler.products
     events:
       - http:
-          path: user/{id}
+          path: user
           method: get
           cors: true
 

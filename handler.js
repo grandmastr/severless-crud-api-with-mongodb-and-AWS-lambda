@@ -56,22 +56,21 @@ module.exports.products = (event, context, callback) => {
 module.exports.updateProduct = (event, context, callback) => {
   const { name, description } = event.body;
   const id = event.pathParameters.id;
-
-  const product = new ProductModel({
-    name,
-    description
-  });
-
-  dbConnectAndExecute(mongoString, () => (
-    ProductModel.findByIdAndUpdate({ _id: id }, { $set: product }, {new: true})
-      .then(updatedDoc => callback(null, {
+  
+  dbConnectAndExecute(mongoString, async () => {
+    try {
+      const product = await ProductModel.findOne({_id: id});
+      const update = {name, description};
+      
+      await product.updateOne(update);
+      callback(null, {
         statusCode: 200,
-        body:  `${updatedDoc.name} updated successfully`
-      }))
-      .catch(err => (
-        callback(null, createErrorResponse(err.statusCode, err.message))
-      ))
-  ));
+        body:  `${name} updated successfully`
+      })
+    } catch(err) {
+      console.error(err);
+    }
+  });
 };
 
 // Delete

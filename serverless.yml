@@ -14,8 +14,8 @@ functions:
           method: post
           cors: true
 # Read
-  product:
-    handler: handler.product
+  products:
+    handler: handler.products
     events:
       - http:
           path: user/{id}
